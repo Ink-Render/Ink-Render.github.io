@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/7 | Ink Rander&#39;s Blog</title>
+  <title>网络流 学习笔记 | Ink Rander&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ink Rander&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/2022/07/index.html">
+  <meta name="description" content="一、引入想象一下，十几年之后，你成为了快递公司的老板，手下有很多的快递小哥，每个小哥负责一条道路，送货就靠小哥们互相传递来完成。有一天，一所不知名的 YL 中学定了一大批货物，需要从发货点送往学校，但是由于每个小哥体力有限，第 $i$ 个小哥一天只能搬运重量为 $c_i$ 的物品，那么一天之内最多可以送出多重的货物呢？这就需要网络流来解决。 二、基本概念 网络  指一个有向图 $G&#x3D;(V">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络流 学习笔记">
+<meta property="og:url" content="http://example.com/2022/07/16/%E7%BD%91%E7%BB%9C%E6%B5%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Ink Rander&#39;s Blog">
+<meta property="og:description" content="一、引入想象一下，十几年之后，你成为了快递公司的老板，手下有很多的快递小哥，每个小哥负责一条道路，送货就靠小哥们互相传递来完成。有一天，一所不知名的 YL 中学定了一大批货物，需要从发货点送往学校，但是由于每个小哥体力有限，第 $i$ 个小哥一天只能搬运重量为 $c_i$ 的物品，那么一天之内最多可以送出多重的货物呢？这就需要网络流来解决。 二、基本概念 网络  指一个有向图 $G&#x3D;(V">
 <meta property="og:locale" content="zh_CH">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/wz73k2ul.png?x-oss-process=image/resize,m_lfit,h_270,w_425">
+<meta property="article:published_time" content="2022-07-16T11:03:01.000Z">
+<meta property="article:modified_time" content="2022-07-16T11:04:10.565Z">
 <meta property="article:author" content="Ink Rander">
+<meta property="article:tag" content="信息竞赛">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/wz73k2ul.png?x-oss-process=image/resize,m_lfit,h_270,w_425">
   
     <link rel="alternative" href="/atom.xml" title="Ink Rander&#39;s Blog" type="application/atom+xml">
   
@@ -169,41 +176,381 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-网络流-学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/%E7%BD%91%E7%BB%9C%E6%B5%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2022-07-16T11:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/%E7%BD%91%E7%BB%9C%E6%B5%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">网络流 学习笔记</a>
   
+    <h1 class="article-title" itemprop="name">
+      网络流 学习笔记
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/07/16/%E7%BD%91%E7%BB%9C%E6%B5%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2022-07-16T11:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">5.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">20分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="一、引入"><a href="#一、引入" class="headerlink" title="一、引入"></a>一、引入</h2><p>想象一下，十几年之后，你成为了快递公司的老板，手下有很多的快递小哥，每个小哥负责一条道路，送货就靠小哥们互相传递来完成。有一天，一所不知名的 YL 中学定了一大批货物，需要从发货点送往学校，但是由于每个小哥体力有限，第 $i$ 个小哥一天只能搬运重量为 $c_i$ 的物品，那么一天之内最多可以送出多重的货物呢？这就需要网络流来解决。</p>
+<h2 id="二、基本概念"><a href="#二、基本概念" class="headerlink" title="二、基本概念"></a>二、基本概念</h2><ol>
+<li>网络</li>
+</ol>
+<p>指一个有向图 $G&#x3D;(V,E)$ 。其中，对于每一个 $(u,v) \in E$ 都有一个权值 $c(u,v)$ ，称之为<strong>容量</strong>。同时，对于每一个 $(u,v) \notin E$ 都有 $c(u,v)&#x3D;0$ 。</p>
+<ol start="2">
+<li>流</li>
+</ol>
+<p>定义一个满足 $u \in V$ 且 $v \in V$ 的函数 $f(u,v)$ ，如果这个函数对于每一个 $(u,v) \in E$ 都有：</p>
+<ul>
+<li><p>容量限制： $f(u,v) \le c(u,v)$ 。</p>
+</li>
+<li><p>斜对称性： $f(u,v) &#x3D; -f(v,u)$ 。</p>
+</li>
+<li><p>流量守恒：$\sum_{(s,x) \in E} f(s,x) &#x3D; \sum_{(x,t) \in E} f(x,t)$ （其中 $s$ 和 $v$ 在下文会提到）</p>
+</li>
+</ul>
+<p>那么就称 $f$ 是 $G$ 的流函数。</p>
+<ol start="3">
+<li>流量平衡</li>
+</ol>
+<p>指对于 $p \in V$ 且 $p \notin { s,t } $ 有 “流入量 $&#x3D;$ 流出量” 即 $\sum_{(x,p) \in E} f(x,p) &#x3D; \sum_{(p,x) \in E} f(p,x)$。</p>
+<ol start="4">
+<li>源点&#x2F;汇点</li>
+</ol>
+<p>在网络流中，有两个比较特殊的点 $s$ 和 $t$ ，我们称之为源点和汇点。这两个点的特殊之处在于：这两个点是网络中唯二的可以不遵守流量平衡但要遵守流量守恒的点。我们所有的流都可以看成是从 $s$ 流出，最后汇入 $t$ 的。 </p>
+<ol start="5">
+<li>满流</li>
+</ol>
+<p>指对于 $(u,v) \in E$ 有 $f(u,v) &#x3D; c(u,v)$ 。</p>
+<ol start="6">
+<li>残量网络</li>
+</ol>
+<p>通俗地讲，指跑过流之后的网络。</p>
+<h3 id="三、最大流"><a href="#三、最大流" class="headerlink" title="三、最大流"></a>三、最大流</h3><ol start="0">
+<li>声明</li>
+</ol>
+<p>下文中除特殊例题外，每一个网络都有 $n$ 个点， $m$ 条边，$s$ 为源点， $t$ 为汇点。</p>
+<ol>
+<li>定义</li>
+</ol>
+<p>最大流问题，指的是对于给定的网络，求出 $s$ 的流出量最大值的一种问题。引入中的问题也就是这种类型的。</p>
+<p>首先，我们需要引入一个概念：增广路。如果从 $s$ 到 $t$ 有一条路径，所有边的剩余容量都大于 0 （即对于所有的 $(u,v) \in E_{s-t}$ 都有 $c(u,v)-f(u,v) \gt 0$ ），那么就称这条路径为增广路。</p>
+<p>我们解决最大流问题的算法，都是在不断地寻找增广路，直到没有增广路为止。接下来给大家介绍三种最大流算法。</p>
+<ol start="2">
+<li>EK 算法</li>
+</ol>
+<p>EK 算法的基本框架就是用 bfs 寻找增广路，然后对找到的增广路进行增广，即计算出可以流过的最大流量（路径上剩余流量的最小值），然后将这个值加入答案并把路径上所有的剩余流量减去这个值，再进行下一次 bfs 。</p>
+<p>但是这样的算法有一定问题。因为我们当前的这条增广路不一定在最优解中，所以我们需要一个类似反悔贪心的“反悔”方式——建反向边。效果图如下：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/wz73k2ul.png?x-oss-process=image/resize,m_lfit,h_270,w_425"></p>
+<p>（图片源自 <a target="_blank" rel="noopener" href="https://oi-wiki.org/">OI-wiki</a>）</p>
+<p>如果你建边使用的是矩阵，那么 <code>e[u][v]</code> 的反向边就是 <code>e[v][u]</code> ；而链式前向星会有些麻烦，需要在一开始建边时先将反向边建好，并将初始流量赋为 0 ，即：</p>
+<p>原来建边：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> u,<span class="type">int</span> v,<span class="type">int</span> c<span class="comment">/*流量*/</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">add</span>(u,v,c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在建边：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> u,<span class="type">int</span> v,<span class="type">int</span> c)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">add</span>(u,v,c);</span><br><span class="line">	<span class="built_in">add</span>(v,u,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还有一个小技巧是建边的计数器 <code>tot</code> 可以从 1 开始，这样产生的效果是：由于原边和反向边是在一起建的，那么第一条边及其反向边的标号会为 2，3，此后每一对边都会为 $2n$ 和 $2n+1$ 。这两个数的特殊性质是： $2n \ xor \ 1 &#x3D; 2n+1 $ ， $2n+1 \ xor \ 1 &#x3D; 2n $ 。所以我们在这两条边转换时只要把当前编号异或 1 即可。</p>
+<p>最后时间复杂度分析， EK 算法最坏需要进行 $nm$ 次增广，每次 bfs 时间复杂度 $O(m)$  ，总复杂度为 $O(nm^2)$ ，效率算是比较低的。</p>
+<p>（复杂度证明参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/uid001/p/10465580.html">这篇博客</a>，本文不作叙述）</p>
+<p>代码实现：（以<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3376">P3376 【模板】网络最大流</a>为例）</p>
+<ul>
+<li>声明</li>
+</ul>
+<p><code>nxt[]</code> ， <code>to[]</code> ， <code>head[]</code> ， <code>tot</code> ：链式前向星</p>
+<p><code>flow[]</code> ： 剩余流量</p>
+<p><code>pre[]</code> ：前驱（当前更新的这个答案来自哪条路径）</p>
+<p><code>now[]</code> ：当前能增广的最大流量</p>
+<ul>
+<li>建图</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> u,<span class="type">int</span> v,<span class="type">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	nxt[++tot]=head[u];</span><br><span class="line">	to[tot]=v;</span><br><span class="line">	flow[tot]=w;</span><br><span class="line">	head[u]=tot;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> x,y,z;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="built_in">add</span>(x,y,z);</span><br><span class="line">		<span class="built_in">add</span>(y,x,<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>bfs</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(now,<span class="number">0</span>,<span class="keyword">sizeof</span> now);</span><br><span class="line">	queue &lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	q.<span class="built_in">push</span>(s);</span><br><span class="line">	now[s]=INF;</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> u=q.<span class="built_in">front</span>(),v,w;</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=head[u];i;i=nxt[i])</span><br><span class="line">		&#123;</span><br><span class="line">			v=to[i],w=flow[i];</span><br><span class="line">			<span class="keyword">if</span>(!now[v] &amp;&amp; w)<span class="comment">//没有到过并且还可以增广</span></span><br><span class="line">			&#123;</span><br><span class="line">				pre[v]=i,now[v]=<span class="built_in">min</span>(now[u],w);</span><br><span class="line">				q.<span class="built_in">push</span>(v);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(now[t]) <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> now[t];<span class="comment">//返回增广结果（是否成功）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>增广</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> u=t;u!=s;u=to[pre[u]^<span class="number">1</span>])</span><br><span class="line">	&#123;</span><br><span class="line">		flow[pre[u]]-=now[t];</span><br><span class="line">		flow[pre[u]^<span class="number">1</span>]+=now[t];</span><br><span class="line">	&#125;</span><br><span class="line">	ans+=now[t];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>调用</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">bfs</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">update</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<p>自己把上面几个部分拼起来即可，希望各位可以自己打出完整代码。</p>
+<ol start="3">
+<li>Dinic 算法</li>
+</ol>
+<p>Dinic 算法与 EK 算法思路基本相同，但实现方法不同。</p>
+<p>Dinic 算法基本框架：先用 bfs 把图分层（如果某条边已经满流就不走），然后用 dfs 进行增广路的搜索，每一次都只找当前点下一层的点，这样可以保证得到的增广路是最短的，在回溯时把找到的增广路进行增广。当 bfs 分层找不到 $t$ 时，算法结束。 Dinic 算法也同样需要反向边。</p>
+<p>同时， Dinic 算法有一个小优化：当前弧优化。由于 Dinic 的 dfs 是不需要重复跑曾经跑过的路的，所以，当一个点被搜索时，可以记录下这个点会跑到哪，并且下一次再搜这个点时从记录的位置搜起。具体看下面代码部分。</p>
+<p>Dinic 算法的优势在于，因为使用的是 dfs 增广，所以每一次可以找到多条增广路，而又由于有 bfs 分层，所以 dfs 的速度不会非常慢。最坏时间复杂度为 $O(n^2m)$ ，但由于 dfs 算法的<del>玄学</del>特殊性以及分层考虑， Dinic 算法一般跑不满这个复杂度，时间上还算优秀。</p>
+<p>（具体时间复杂度分析请搜索 07 年冬令营《浅谈基于分层思想的网络流算法》 王欣）</p>
+<p>代码实现：</p>
+<ul>
+<li>声明</li>
+</ul>
+<p><code>cur[]</code> ：当前弧优化</p>
+<ul>
+<li>bfs</li>
+</ul>
+<p>注意 bfs 的类型是 <code>bool</code> ，每次分完层之后返回 <code>vst[t]</code> 即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(vst,<span class="literal">false</span>,<span class="keyword">sizeof</span> vst);</span><br><span class="line">	queue &lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	q.<span class="built_in">push</span>(s);</span><br><span class="line">	vst[s]=<span class="literal">true</span>,dep[s]=<span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> u,v;</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		u=q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=head[u];i;i=nxt[i])</span><br><span class="line">		&#123;</span><br><span class="line">			v=to[i];</span><br><span class="line">			<span class="keyword">if</span>(!vst[v] &amp;&amp; flow[i])<span class="comment">//没到过，有流量</span></span><br><span class="line">			&#123;</span><br><span class="line">				q.<span class="built_in">push</span>(v);</span><br><span class="line">				dep[v]=dep[u]+<span class="number">1</span>，vst[v]=<span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> vst[t];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>dfs</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(u==t || x==<span class="number">0</span>) <span class="keyword">return</span> x;<span class="comment">//搜到底或者没有流量</span></span><br><span class="line">	<span class="type">int</span> sum=<span class="number">0</span>,now,v;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=cur[u];i;i=nxt[i])</span><br><span class="line">	&#123;</span><br><span class="line">		cur[u]=i,v=to[i];<span class="comment">//注意当前弧优化，也可以把 i 换成引用</span></span><br><span class="line">		<span class="keyword">if</span>(dep[v]==dep[u]+<span class="number">1</span> &amp;&amp; (now=<span class="built_in">dfs</span>(v,<span class="built_in">min</span>(x,flow[i]))))<span class="comment">//下一层，后面有增广路</span></span><br><span class="line">			flow[i]-=now,flow[i^<span class="number">1</span>]+=now,sum+=now,x-=now;<span class="comment">//增广</span></span><br><span class="line">		<span class="keyword">if</span>(!x) <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>调用</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">bfs</span>())</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		cur[i]=head[i];</span><br><span class="line">	ans+=<span class="built_in">dfs</span>(s,INF);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>ISAP</li>
+</ol>
+<p>（先咕着）</p>
+<ol start="5">
+<li>预流推进</li>
+</ol>
+<p>（ISAP都没写你还想着这个？）</p>
+<h3 id="四、费用流"><a href="#四、费用流" class="headerlink" title="四、费用流"></a>四、费用流</h3><ol>
+<li>定义</li>
+</ol>
+<p>我们再回到引入中的问题。加入一个条件：假设第 $i$ 个小哥每搬运重量为 1 的货物需要付给他 $cost_i$ 的工资。那么<strong>在保证满足最大流的前提下</strong>，需要让付的工资最少。</p>
+<p>费用流较常用的算法有 SSP 算法，接下来我们对其进行分析。</p>
+<ol start="2">
+<li>SSP 算法</li>
+</ol>
+<p>首先我们要注意这个前提，这说明我们算法的框架仍然是最大流。那么，在求最大流的前提下，我们如何找到花费最小的路呢？这时，我们就能想到另一个问题：最短路问题。</p>
+<p>SSP 算法是一个以贪心为基本思想的算法。这个算法的基本框架是：在原来最大流的基础上，使用最短路算法，每次只找花费最小的增广路，这样求出的最大流花费必然最小。</p>
+<p>不过这个结论并不显然，有兴趣的同学可以自行思考，可以使用反证法 + 数学归纳法证明，本文不做叙述。</p>
+<p>代码实现：</p>
+<ul>
+<li>声明：</li>
+</ul>
+<p><code>cost[]</code> ：每条边的花费</p>
+<p><code>dis[]</code> ：SPFA 算法</p>
+<ul>
+<li>基于 EK 的实现</li>
+</ul>
+<p>将原来的 bfs 中加入最短路的部分。在计算出单次增广路的流量之后，将流量乘上 <code>dis[t]</code> （即整条路上的单价之和）。</p>
+<ul>
+<li>基于 Dinic 的实现</li>
+</ul>
+<p>由于 dinic 的思想本就是找到最短的增广路，所以可以直接将原来的 bfs 分层中的 <code>dep[]</code> 改成计算价值的 <code>dis[]</code> 。</p>
+<p>这两种实现我们均不放入代码，读者可以直接在最大流的板子上进行修改。</p>
+<ol start="3">
+<li>Primal-Dual 算法</li>
+</ol>
+<p>（还没学……咕咕咕）</p>
+<h3 id="五、上下界网络流"><a href="#五、上下界网络流" class="headerlink" title="五、上下界网络流"></a>五、上下界网络流</h3><ol>
+<li>定义</li>
+</ol>
+<p>看到“上下界”这个名字，意思也就很明显了。网络流本身是规定了上界的，而这类问题则是给每条边再加一个下界 <code>b[i]</code> ，考虑在<strong>网络中的（而不是最大流中的）所有边</strong>均满足上下界要求时的情况。</p>
+<p>由于这种情况是可能不存在的，所以我们先要从可行流，即判断是否存在开始。</p>
+<ol start="2">
+<li>无源汇上下界可行流</li>
+</ol>
+<p>首先我们要先有这样一个概念：每一条边的下界是必须要流的，所以我们在进行判断之前可以先让所有边都流过它的最小流量，但是这样又会有一个问题，那就是有些点会流量不平衡。为了处理这个问题，又因为这个网络中没有源点汇点，所以我们可以自己建立一个源点 $s$ 和汇点 $t$ 。</p>
+<p>假设每个点有一个值 $p$ ，当从这个点流入 $x$ 的流量时，将 $p_i$ 加上 $x$ ，当流出时，将 $p_i$ 减去 $x$ 。对于所有的 $p[i] \gt 0$ 的点 $i$ ，从 $s$ 向 $i$ 连一条大小为 $p[i]$ 的边。同样，对于所有的 $p[i] \lt 0$ 的点 $i$ ，从 $i$ 向 $t$ 连一条大小为 $-p[i]$ 的边。通过这样的操作来保证网络中的点的流量平衡。</p>
+<p>在建完图之后跑从 $s$ 到 $t$ 的最大流，如果说在前面建的附加边全部满流，则说明原图可以流量平衡，存在可行流，否则不存在。</p>
+<p>代码实现：</p>
+<ul>
+<li>声明</li>
+</ul>
+<p><code>p[]</code> ：见上</p>
+<ul>
+<li>建图</li>
+</ul>
+<p>需要在建图中增加：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p[u]-=b;</span><br><span class="line">p[v]+=b;</span><br></pre></td></tr></table></figure>
+
+<p>然后加入虚拟源汇点和附加边：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">s=n+<span class="number">1</span>,t=n+<span class="number">2</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(p[i]&gt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">add</span>(s,i,<span class="number">0</span>,p[i]);</span><br><span class="line">		<span class="built_in">add</span>(i,s,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">		ans-=p[i];<span class="comment">//提前计算附加边的流量</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(p[i]&lt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">add</span>(i,t,<span class="number">0</span>,-p[i]);</span><br><span class="line">		<span class="built_in">add</span>(t,i,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可行性判断</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(ans) <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>有源汇上下界可行流</li>
+</ol>
+<p>有了上一个算法的铺垫，我们就可以想办法将有源汇转换成无源汇。</p>
+<p>既然有源点汇点，也就是说这两个点可以流量不平衡，假设源点为 $ss$ ，汇点为 $tt$ （为了与无源汇中的虚拟 $s$ 和 $t$ 区别）， $ss$ 可以有 <code>p[ss]</code> $\gt 0$ ， $tt$ 可以有 <code>p[tt]</code> $\lt 0$ 。为了转化成无源汇，我们可以从 $tt$ 到 $ss$ 连一条上界为正无穷，下界为 0 的边。这样，无论 $ss$ 和 $tt$ 的流量如何不平衡，都可以通过附加边保证平衡。</p>
+<p>接下来用无源汇可行流判断即可。</p>
+<p>代码实现：</p>
+<p>加入：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">add</span>(tt,ss,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">flow[tot]=INF;<span class="comment">//在 add 外面赋值，这个 flow 值才不会算入 p 数组中</span></span><br><span class="line"><span class="built_in">add</span>(ss,tt,<span class="number">0</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>有源汇上下界最大流</li>
+</ol>
+<p>现在我们已经可以判断可行性了，那么接下来就可以找最大流了。</p>
+<p>首先肯定需要过一遍可行流，如果无可行流直接结束。但在判断完可行性之后，如果要找最大流，并不需要重新找，而是可以在它的残量网络上找。由于从 $tt$ 到 $ss$ 的边是我们为了找可行流加入的边，所以在找最大流时，我们需要把这条边去掉，再跑一遍从 $s$ 到 $t$ 残量网络的最大流，将可行流与最大流相加即可。</p>
+<p>代码实现：</p>
+<p>加入：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(ans!=res) <span class="built_in">puts</span>(<span class="string">&quot;-1&quot;</span>);<span class="comment">//res 是附加边流量</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	ans=flow[tot];</span><br><span class="line">	flow[tot]=flow[tot^<span class="number">1</span>]=<span class="number">0</span>;<span class="comment">//将附加边流量清零</span></span><br><span class="line">	s=ss,t=tt;<span class="comment">//要跑题目中给的源点汇点的最大流</span></span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">bfs</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">			cur[i]=head[i];</span><br><span class="line">		ans+=<span class="built_in">dfs</span>(s,INF);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="六、建模"><a href="#六、建模" class="headerlink" title="六、建模"></a>六、建模</h3><p>其实网络流的题目，在求解时的算法与板子基本相差无几，而更难的问题在于最大流的模型的建立。接下来会讲解一些常用的模型，并在后面的习题中带大家看几个建模。</p>
+<ol>
+<li>建立虚拟的超源超汇</li>
+</ol>
+<p>超级源&#x2F;汇点，简称超源&#x2F;汇，指的是在一个有多个或没有源&#x2F;汇点的图中，建立一个虚拟的源&#x2F;汇点，并将所有源&#x2F;汇点与其相连，从而将源&#x2F;汇点从多个转变为一个。</p>
+<p>这个方法常用与解决二分图问题，将超源与左部图一一相连，右部图与超汇相连，跑一边超源到超汇的最大流即可。</p>
+<ol start="2">
+<li>拆点</li>
+</ol>
+<p>拆点，顾名思义，就是将一个点拆开。<del>（废话）</del></p>
+<p>由于网络流问题处理的都是边上的问题，那么如何用网络流考虑点呢？拆点，就是把一个点 $i$ 拆成两个点 $i_1$ 和 $i_2$ ，并且连一条边 $(i_1,i_2)$ 。对于每一条连到点 $i$ 的边，我们都让它与 $i_1$ 相连；而每一条从点 $i$ 连出的边，我们都从 $i_2$ 连出。这样，就可以将点权转化为边权了。当然，在实际运用中，我们还有更加巧妙的运用，例如用两个点表示一个结点的不同状态等。</p>
+<ol start="3">
+<li>分层图</li>
+</ol>
+<p>在一类问题中，我们需要限制流的速度，原始的网络流是无法满足这个要求的。分层建图法应运而生。</p>
+<p>分层图网络流的主要做法是在每个单位时间内将原图新加一层，将上一层的点连向当前层的点，以保证每个流在单位时间里只会流过一条边（对于原图而言），从而达到目的。</p>
+<p>分层图建模细节较多，记得根据题目要求连边。</p>
+<ol start="4">
+<li>最小割</li>
+</ol>
+<p>先上定理：最小割等于最大流。证明请读者自行查找。<del>（太难了不会）</del></p>
+<p>最小割模型一般应用于一些结点之间相互限制的问题。我们通过判断是否割掉一些结点所连的边来对应限制的满足与否。一般而言，如果一条边满流，则这条边被割掉，相当于这个限制得到满足。</p>
+<p>比较典型的是形如条件与结论的对应关系，即多个条件的组合得到结论，求最大价值组合。此时，割掉一部分条件，相当于选择了这些条件以及它们所对应的结论。我们希望条件所消耗的贡献最小，即求最小割。</p>
+<ol start="5">
+<li>典型特征——二分图</li>
+</ol>
+<p>大部分二分图问题都可以使用网络流解决，所以如果题目中出现了很明显将东西分成两类的条件，那么可以往网络流上思考。</p>
+<h3 id="七、习题"><a href="#七、习题" class="headerlink" title="七、习题"></a>七、习题</h3><ul>
+<li>题目：</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3376">P3376 【模板】网络最大流</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3381">P3381 【模板】最小费用最大流</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5192">P5192 Zoj3229 Shoot the Bullet|东方文花帖|【模板】有源汇上下界最大流</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6268">P6268 [SHOI2002]舞会</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3163">P3163 [CQOI2014]危桥</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2770">P2770 航空路线问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA1324">UVA1324 Bring Them There</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2762">P2762 太空飞行计划问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2774">P2774 方格取数问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2764">P2764 最小路径覆盖问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3227">P3227 [HNOI2013]切糕</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA1411">UVA1411 Ants</a></p>
+<hr>
+<ul>
+<li>解析</li>
+</ul>
+<p>解析中有的是直接给出解法，有一些较复杂的题目只会给出思路，具体题解请读者自行查看。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3376">P3376 【模板】网络最大流</a></p>
+<p>最大流板子</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3381">P3381 【模板】最小费用最大流</a></p>
+<p>费用流板子</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5192">P5192 Zoj3229 Shoot the Bullet|东方文花帖|【模板】有源汇上下界最大流</a></p>
+<p>有源汇上下界最大流板子</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6268">P6268 [SHOI2002]舞会</a></p>
+<p>本来是二分图的板子题，但是用于练习网络流也是不错的。（有点麻烦）</p>
+<p>这道题是标准的超源超汇建图题。先对原图进行染色，然后将超源与某一种颜色的点相连，另一种颜色的点与超汇相连，跑一遍最大流即可。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3163">P3163 [CQOI2014]危桥</a></p>
+<p>相信大家看到这个题第一眼都是建超源超汇，然后喜提 30 pts ……考虑一个问题，可能会有从 $A_1$ 出来的流跑到 $B_2$ （或 $A_2$ 到 $B_1$ ），考虑如何消除这个矛盾。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2770">P2770 航空路线问题</a></p>
+<p>拆点经典题。</p>
+<p>考虑如何满足 “除起点城市外，任何城市只能访问一次” 的限制，想到拆点将点的访问限制改为边的访问限制。由于要让经过的点数尽可能多，所以求最大费用最大流即可。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA1324">UVA1324 Bring Them There</a></p>
+<p>注意一个限制：“每条隧道需要一天时间来通过”，显然可以使用分层图。</p>
+<p>具体解析可以参考我写的<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/zym20070228/solution-uva1324">这篇题解</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2770">P2762 太空飞行计划问题</a></p>
+<p>经典最小割模型。</p>
+<p>这和上面所说的“条件-结论”对应关系非常相似。一个实验有贡献需要满足多个仪器均有贡献，按照最小割建模，从超源连向实验，从仪器连向超汇，实验和条件再依次连接，答案即为实验的总贡献减去被割掉的仪器即最大流的贡献。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2774">P2774 方格取数问题</a></p>
+<p>另一种最小割模型。</p>
+<p>每个方格与周围四个方格互相排斥，则要么割掉这个方格，要么割掉其他四个方格。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2764">P2764 最小路径覆盖问题</a></p>
+<p>根据题意，在划分成若干条链后，一个结点的出入度至多为1。很明显，一条链是结点两两合并的结果，而两个结点合并相当于使路径数减一，所以只要求出最大合并次数即可。由于每个结点最多有一个入度一个出度，所以考虑拆点，将点 $i$ 拆成 $x_i$ 和 $y_i$ 。源点与 $x$ 连边 ，$y$ 与汇点连边，这些边的容量均为 1 。再将原图中的边 $(i,j)$ 的 $x_i$ 与 $y_j$ 相连。每一个流相当于一次合并，故答案为最大流。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3227">P3227 [HNOI2013]切糕</a></p>
+<p>题意有些难理解。</p>
+<p>定义点是三维点阵中的点，位置是去掉 $z$ 轴后二维平面上的点。</p>
+<p>先考虑没有第二个限制的做法，显然是循环每一层求每个位置最小值。不过经过观察可以发现，这个模型相当于点 $(x,y,z)$ 对于位置 $(x,y)$ 有一个 $v(x,y,z)$ 的限制，本质等于最小割模型。</p>
+<p>考虑如何限制选择的点之间的 $z$ 轴距离。对于相邻的两个位置 $i$ 和 $j$ ，如果 $i$ 上所选择的点高为 $z_i$ ，那么 $z_j$ 最小要取到 $z_i-d$ ，所以 $j$ 上高度小于 $z_i-d$ 的所有点都不应对答案造成贡献，即就算这些边被割掉，后面符合条件的边依旧可以被割。思考如何在 $i$ 、 $j$ 之间的点建边。 </p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA1411">UVA1411 Ants</a></p>
+<p>首先，经过思考可以得到结论：当连出的所有线段长度和最小时一定是一种合法方案（具体使用三角形三边关系证明）。</p>
+<p>那么问题变成了如何让黑点与白点一一配对使得线段长度和最小，显然可以在黑点与白点之间连上价值等于它们距离的边，原题转化为二分图最小权匹配，使用费用流即可。</p>
+<p>（暂结）</p>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Ink Rander
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2022/07/16/网络流-学习笔记/" title="网络流 学习笔记" target="_blank">http://example.com/2022/07/16/网络流-学习笔记/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -215,51 +562,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/07/16/%E7%BD%91%E7%BB%9C%E6%B5%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/%E7%AE%80%E4%BB%8B/" class="archive-article-date">
-        <time datetime="2022-07-16T10:17:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/16/%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简介</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/%E7%AE%80%E4%BB%8B/" target="_blank">简介</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -300,8 +703,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
